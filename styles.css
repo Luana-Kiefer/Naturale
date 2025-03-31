@@ -1,0 +1,311 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #F3F1E7;
+    color: #6B4F3F;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização do Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('wood-texture.jpg') center/cover no-repeat;
+    padding: 1rem 4rem;
+    color: #6B4F3F;
+    text-align: center;
+    position: relative;
+}
+
+.logo-container {
+    flex: 0 0 auto;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    flex: 1;
+    font-weight: 700;
+}
+
+/* Menu de Navegação */
+.menu-container {
+    background-color: #8C734D;
+    padding: 10px 0;
+    border-radius: 0;
+    margin-top: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+}
+
+/* Submenu */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #A78C5F;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    list-style: none;
+    padding: 0;
+    width: 180px;
+    z-index: 1000;
+    transform: translateY(10px);
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu a {
+    padding: 8px 12px;
+    display: block;
+    color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+}
+
+/* Efeito de sombra e cor de fundo ao passar o mouse sobre os itens do submenu */
+.submenu a:hover {
+    background-color: #8C734D;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateX(5px);
+}
+
+/* Exibição do submenu ao passar o mouse */
+.menu li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Estilização do Carrossel */
+.carousel-item img {
+    max-width: 4320px;
+    height: 550px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+/* Seção de Produtos */
+#produtos {
+    text-align: center;
+    padding: 40px 0;
+}
+.produto-img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+    height: auto; /* Mantém a proporção original da imagem */
+    object-fit: contain; /* Faz com que a imagem inteira seja exibida sem cortes */
+    display: block; /* Evita margens indesejadas */
+    max-height: 250px; /* Define um limite máximo para evitar distorções */
+}
+
+#produtos h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #5A3E2B;
+}
+
+/* Estilização dos Cards de Produtos */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto; /* Mantém a proporção */
+    max-height: 200px; /* Limita sem cortar */
+    object-fit: contain; /* Mostra a imagem inteira sem cortes */
+}
+
+.card-body {
+    background-color: #FFF7E7;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Botão */
+.btn-primary {
+    background-color: #8C734D;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #A78C5F;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #8C734D;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-left, .footer-right {
+    width: 48%;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-left h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.footer-social {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.footer-social:hover {
+    text-decoration: underline;
+}
+
+/* Seção Cadastro e Agendamento */
+#cadastro-agendamento {
+    background-color: #A78C5F; /* Tom amadeirado suave */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+#cadastro-agendamento h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #FFF7E7;
+}
+
+/* Estilização dos campos de entrada */
+#cadastro-agendamento input,
+#cadastro-agendamento select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FFF7E7;
+    color: #6B4F3F;
+    font-size: 16px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#cadastro-agendamento input:focus,
+#cadastro-agendamento select:focus {
+    outline: none;
+    border: 2px solid #8C734D;
+    box-shadow: 0 0 8px rgba(140, 115, 77, 0.5);
+}
+
+/* Botões */
+#cadastro-agendamento button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8C734D;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#cadastro-agendamento button:hover {
+    background-color: #5A3E2B;
+    transform: scale(1.05);
+}
+
+/* Estilos para melhor responsividade */
+@media (max-width: 768px) {
+    #cadastro-agendamento {
+        max-width: 90%;
+        padding: 30px;
+    }
+}
